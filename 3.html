@@ -2,18 +2,57 @@
 <html>
 <head>
   <title>WEB1 - JavaScript</title>
-  <meta charset="urf=8">
+  <meta charset="utf=8">
+  <!--
+  <link rel="stylesheet" href="style.css">
+-->
 </head>
 <body>
-  <h1><a href="index.html">WEB</h1>
-  <ol>
-    <li><a href="1.html">HTML</a></li>
-    <li><a href="2.html">CSS</a></li>
-    <li><a href="3.html">JavaScript</a></li>
-  </ol>
-  <h2>JavaScript</h2>
-  <p>
-    JavaScript (/ˈdʒɑːvəˌskrɪpt/), often abbreviated as JS, is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions. Alongside HTML and CSS, JavaScript is one of the core technologies of the World Wide Web. JavaScript enables interactive web pages and is an essential part of web applications. The vast majority of websites use it for client-side page behavior, and all major web browsers have a dedicated JavaScript engine to execute it.
-  </p>
+  <h1><a href="index.html">WEB</a></h1>
+  <input type="button" value="night" onclick="
+  var target = document.querySelector('body');
+  if(this.value === 'night') {
+    target.style.backgroundColor = 'black';
+    target.style.color = 'white';
+    this.value = 'day'
+
+    var links = document.querySelectorAll('a');
+    var i = 0;
+    while(i<links.length) {
+      links[i].style.color='powderblue';
+      i=i+1;
+    }
+  } else {
+    target.style.backgroundColor = 'white';
+    target.style.color = 'black';
+    this.value = 'night'
+
+    var links = document.querySelectorAll('a');
+    var i = 0;
+    while(i<links.length) {
+      links[i].style.color='blue';
+      i=i+1;
+    }
+  }
+  ">
+  <!--
+  <div id="grid">
+  -->
+    <ol>
+      <li><a href="1.html">HTML</a></li>
+      <li><a href="2.html">CSS</a></li>
+      <li><a href="3.html">JavaScript</a></li>
+    </ol>
+    <!--
+      <div id="article">
+      -->
+        <h2>JavaScript</h2>
+        <p>
+          JavaScript (/ˈdʒɑːvəˌskrɪpt/), often abbreviated as JS, is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions. Alongside HTML and CSS, JavaScript is one of the core technologies of the World Wide Web. JavaScript enables interactive web pages and is an essential part of web applications. The vast majority of websites use it for client-side page behavior, and all major web browsers have a dedicated JavaScript engine to execute it.
+        </p>
+        <!--
+    </div>
+  </div>
+-->
 </body>
 </html>
