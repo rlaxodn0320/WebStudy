@@ -3,6 +3,8 @@
 <head>
   <title>WEB1 - JavaScript</title>
   <meta charset="utf=8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="colors.js"></script>
   <!--
   <link rel="stylesheet" href="style.css">
 -->
@@ -10,30 +12,7 @@
 <body>
   <h1><a href="index.html">WEB</a></h1>
   <input type="button" value="night" onclick="
-  var target = document.querySelector('body');
-  if(this.value === 'night') {
-    target.style.backgroundColor = 'black';
-    target.style.color = 'white';
-    this.value = 'day'
-
-    var links = document.querySelectorAll('a');
-    var i = 0;
-    while(i<links.length) {
-      links[i].style.color='powderblue';
-      i=i+1;
-    }
-  } else {
-    target.style.backgroundColor = 'white';
-    target.style.color = 'black';
-    this.value = 'night'
-
-    var links = document.querySelectorAll('a');
-    var i = 0;
-    while(i<links.length) {
-      links[i].style.color='blue';
-      i=i+1;
-    }
-  }
+    nightDayHandler(this);
   ">
   <!--
   <div id="grid">
